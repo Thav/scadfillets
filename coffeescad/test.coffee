@@ -34,6 +34,10 @@ testFilletPlank = () ->
 testFilletPlate = () ->
   assembly.add(new filletPlate({size:[15,10,3]}).translate([0,20,0]))
   
-testFilletPlank()
-testFilletPlate()
-testCubePosFillet()
+cylinderPosFillet = () ->
+  assembly.add(new cylinderPositiveFillet({r:5,h:10,fradius:3,top:0,bottom:0,$fn:10}).translate([-20,0,0]))
+  
+#testFilletPlank()
+#testFilletPlate()
+#testCubePosFillet()
+#cylinderPosFillet()
